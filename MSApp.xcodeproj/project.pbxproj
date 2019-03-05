@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062CEEE889D9D4FBF1A6A3D0 /* Pods_MSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF397AB199CFB39DD6B56B3 /* Pods_MSApp.framework */; };
 		30EF259D222E8C6300C3F01C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF259C222E8C6300C3F01C /* AppDelegate.swift */; };
 		30EF259F222E8C6300C3F01C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF259E222E8C6300C3F01C /* ViewController.swift */; };
 		30EF25A2222E8C6300C3F01C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EF25A0222E8C6300C3F01C /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		30EF25A3222E8C6400C3F01C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30EF25A6222E8C6400C3F01C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30EF25A8222E8C6400C3F01C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EC7F4E90625557968E1B828 /* Pods-MSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSApp.release.xcconfig"; path = "Target Support Files/Pods-MSApp/Pods-MSApp.release.xcconfig"; sourceTree = "<group>"; };
+		7744634C430E099A81CDAD2D /* Pods-MSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSApp.debug.xcconfig"; path = "Target Support Files/Pods-MSApp/Pods-MSApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FEF397AB199CFB39DD6B56B3 /* Pods_MSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062CEEE889D9D4FBF1A6A3D0 /* Pods_MSApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				30EF259B222E8C6300C3F01C /* MSApp */,
 				30EF259A222E8C6300C3F01C /* Products */,
+				70ECA21B49E2D272B784288C /* Pods */,
+				72DC16B57FD76F442F79D304 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = MSApp;
 			sourceTree = "<group>";
 		};
+		70ECA21B49E2D272B784288C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7744634C430E099A81CDAD2D /* Pods-MSApp.debug.xcconfig */,
+				6EC7F4E90625557968E1B828 /* Pods-MSApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		72DC16B57FD76F442F79D304 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEF397AB199CFB39DD6B56B3 /* Pods_MSApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30EF25AB222E8C6400C3F01C /* Build configuration list for PBXNativeTarget "MSApp" */;
 			buildPhases = (
+				5EED39C1DC73FC0B89E5B724 /* [CP] Check Pods Manifest.lock */,
 				30EF2595222E8C6300C3F01C /* Sources */,
 				30EF2596222E8C6300C3F01C /* Frameworks */,
 				30EF2597222E8C6300C3F01C /* Resources */,
+				EB292DCB0191EDABEF031A7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EED39C1DC73FC0B89E5B724 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MSApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB292DCB0191EDABEF031A7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MSApp/Pods-MSApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MSApp/Pods-MSApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MSApp/Pods-MSApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30EF2595222E8C6300C3F01C /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		30EF25AC222E8C6400C3F01C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7744634C430E099A81CDAD2D /* Pods-MSApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		30EF25AD222E8C6400C3F01C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC7F4E90625557968E1B828 /* Pods-MSApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
