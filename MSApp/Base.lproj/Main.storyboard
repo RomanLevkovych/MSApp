@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="25" y="282"/>
         </scene>
-        <!--View Controller-->
+        <!--Межі вибірки-->
         <scene sceneID="aV5-Yc-aGS">
             <objects>
                 <viewController id="x5v-6M-mfN" customClass="ViewController" customModule="MSApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,36 +34,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Початок відрізку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFf-Hc-IvQ">
-                                <rect key="frame" x="51" y="360" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-v3-vO4">
+                                <rect key="frame" x="209" y="563" width="185" height="29"/>
+                                <segments>
+                                    <segment title="Дискретна"/>
+                                    <segment title="Неперервна"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кількість елементів:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uK-6N-YgX">
+                                <rect key="frame" x="20" y="493" width="161" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Кількість об'єктів" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9y-1E-Hjp">
-                                <rect key="frame" x="28" y="503" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кінець відрізку:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrE-7E-FiV">
+                                <rect key="frame" x="20" y="438" width="125" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Кінець відрізку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ox-21-PyL">
-                                <rect key="frame" x="37" y="438" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Початок відрізку:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iny-9R-8uR">
+                                <rect key="frame" x="20" y="383" width="139" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dzw-3G-E57">
+                                <rect key="frame" x="201" y="383" width="193" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3kU-4g-7MZ">
+                                <rect key="frame" x="201" y="438" width="193" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ol-27-7au">
+                                <rect key="frame" x="201" y="493" width="193" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2J-bH-KIW">
+                                <rect key="frame" x="8" y="814" width="398" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aSv-7e-Z6A"/>
+                                </constraints>
+                                <state key="normal" title="Згенерувати"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вибірка:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7l-5l-Ygf">
+                                <rect key="frame" x="20" y="563" width="75" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IJP-v3-vO4" firstAttribute="leading" secondItem="L7l-5l-Ygf" secondAttribute="trailing" constant="114" id="5Wt-v4-Cb4"/>
+                            <constraint firstItem="7uK-6N-YgX" firstAttribute="top" secondItem="3kU-4g-7MZ" secondAttribute="bottom" constant="25" id="96Z-e0-rbj"/>
+                            <constraint firstItem="4ol-27-7au" firstAttribute="leading" secondItem="7uK-6N-YgX" secondAttribute="trailing" constant="20" id="9Mj-HW-C4Z"/>
+                            <constraint firstItem="4ol-27-7au" firstAttribute="height" secondItem="7uK-6N-YgX" secondAttribute="height" id="Alo-0x-nmQ"/>
+                            <constraint firstItem="Dzw-3G-E57" firstAttribute="centerY" secondItem="iny-9R-8uR" secondAttribute="centerY" id="DrA-K7-jQB"/>
+                            <constraint firstItem="L7l-5l-Ygf" firstAttribute="top" secondItem="7uK-6N-YgX" secondAttribute="bottom" constant="40" id="HA5-MP-eqa"/>
+                            <constraint firstItem="IJP-v3-vO4" firstAttribute="centerY" secondItem="L7l-5l-Ygf" secondAttribute="centerY" id="IsP-Ww-sV8"/>
+                            <constraint firstItem="4ol-27-7au" firstAttribute="centerY" secondItem="7uK-6N-YgX" secondAttribute="centerY" id="JfI-WE-WoV"/>
+                            <constraint firstItem="3kU-4g-7MZ" firstAttribute="leading" secondItem="4ol-27-7au" secondAttribute="leading" id="N7K-OH-UX8"/>
+                            <constraint firstItem="AG1-oJ-079" firstAttribute="trailing" secondItem="Dzw-3G-E57" secondAttribute="trailing" constant="20" id="PjS-sm-UjK"/>
+                            <constraint firstItem="x2J-bH-KIW" firstAttribute="leading" secondItem="AG1-oJ-079" secondAttribute="leading" constant="8" id="RI6-bQ-xah"/>
+                            <constraint firstItem="Dzw-3G-E57" firstAttribute="leading" secondItem="iny-9R-8uR" secondAttribute="trailing" constant="42" id="TqO-sU-Uoh"/>
+                            <constraint firstItem="3kU-4g-7MZ" firstAttribute="height" secondItem="XrE-7E-FiV" secondAttribute="height" id="UU7-VH-LYZ"/>
+                            <constraint firstItem="Dzw-3G-E57" firstAttribute="height" secondItem="iny-9R-8uR" secondAttribute="height" id="a5x-K9-oqH"/>
+                            <constraint firstItem="AG1-oJ-079" firstAttribute="trailing" secondItem="x2J-bH-KIW" secondAttribute="trailing" constant="8" id="cB8-0i-Awz"/>
+                            <constraint firstItem="IJP-v3-vO4" firstAttribute="height" secondItem="L7l-5l-Ygf" secondAttribute="height" id="eiE-zG-OT3"/>
+                            <constraint firstItem="3kU-4g-7MZ" firstAttribute="centerY" secondItem="XrE-7E-FiV" secondAttribute="centerY" id="exO-an-ixr"/>
+                            <constraint firstItem="L7l-5l-Ygf" firstAttribute="leading" secondItem="7uK-6N-YgX" secondAttribute="leading" id="fbT-kP-ryk"/>
+                            <constraint firstItem="iny-9R-8uR" firstAttribute="leading" secondItem="AG1-oJ-079" secondAttribute="leading" constant="20" id="gNW-71-mM6"/>
+                            <constraint firstItem="AG1-oJ-079" firstAttribute="bottom" secondItem="x2J-bH-KIW" secondAttribute="bottom" constant="8" id="hKB-tN-6us"/>
+                            <constraint firstItem="3kU-4g-7MZ" firstAttribute="trailing" secondItem="Dzw-3G-E57" secondAttribute="trailing" id="hh0-7x-zHL"/>
+                            <constraint firstItem="7uK-6N-YgX" firstAttribute="leading" secondItem="AG1-oJ-079" secondAttribute="leading" constant="20" id="i02-hv-jDh"/>
+                            <constraint firstItem="Dzw-3G-E57" firstAttribute="leading" secondItem="4ol-27-7au" secondAttribute="leading" id="jYO-5H-TxL"/>
+                            <constraint firstItem="Dzw-3G-E57" firstAttribute="centerY" secondItem="Fgp-Ac-Hxm" secondAttribute="centerY" constant="-50" id="mlG-Kp-fpJ"/>
+                            <constraint firstItem="3kU-4g-7MZ" firstAttribute="leading" secondItem="XrE-7E-FiV" secondAttribute="trailing" constant="56" id="pur-Ln-fjB"/>
+                            <constraint firstItem="XrE-7E-FiV" firstAttribute="leading" secondItem="AG1-oJ-079" secondAttribute="leading" constant="20" id="reT-fS-VK7"/>
+                            <constraint firstItem="IJP-v3-vO4" firstAttribute="trailing" secondItem="4ol-27-7au" secondAttribute="trailing" id="vCo-nr-g9e"/>
+                            <constraint firstItem="XrE-7E-FiV" firstAttribute="top" secondItem="iny-9R-8uR" secondAttribute="bottom" constant="25" id="xLb-w3-szx"/>
+                            <constraint firstItem="4ol-27-7au" firstAttribute="trailing" secondItem="3kU-4g-7MZ" secondAttribute="trailing" id="xxW-lb-if9"/>
+                            <constraint firstItem="4ol-27-7au" firstAttribute="leading" secondItem="7uK-6N-YgX" secondAttribute="trailing" constant="20" id="zX2-bM-P3M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AG1-oJ-079"/>
                     </view>
-                    <navigationItem key="navigationItem" id="toK-eu-xen"/>
+                    <navigationItem key="navigationItem" title="Межі вибірки" id="toK-eu-xen"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHM-E5-4iY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="281"/>
+            <point key="canvasLocation" x="894.20289855072474" y="280.58035714285711"/>
         </scene>
     </scenes>
 </document>
