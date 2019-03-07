@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum DataType {
-  case discrete
-  case continious
+enum DataType: Int {
+  case discrete = 0
+  case continious = 1
 }
 
 struct DataCharacteristic {

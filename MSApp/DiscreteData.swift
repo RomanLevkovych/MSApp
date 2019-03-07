@@ -13,12 +13,12 @@ class DiscreteData {
 
   init(from characteristics: DataCharacteristic) {
     data = (0..<characteristics.amount).map {_ in
-      Int.random(in: characteristics.intervalStart...characteristics.intervalEnd)
+      Int.random(in: characteristics.startInterval...characteristics.endInterval)
     }
   }
 
-  func quantil(alpha: Int) -> Int? {
-    let q = Int(Double(data.count * alpha) / 100.0 - 1)
+  func quantil(alpha: Double) -> Int? {
+    let q = Int(Double(data.count) * alpha / 100.0 - 1)
     if q > 0 {
       return data[q]
     } else {
@@ -32,9 +32,9 @@ class DiscreteData {
   }
 
   var mode: [Int] {
-    let max = data.reduce(into: [:]) { res, item in res[item, default: 0] += 1}.max { $0.value < $1.value }?.value
+    let max = data.reduce(into: [:]) { res, item in res[item, default: 0] += 1}.max { $0.value < $1.value }?.key
 
-    return data.filter { $0 == max }
+    return Array<Int>(Set<Int>(data.filter { $0 == max }))
   }
 
   var average: Double {

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		062CEEE889D9D4FBF1A6A3D0 /* Pods_MSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF397AB199CFB39DD6B56B3 /* Pods_MSApp.framework */; };
+		3087454C222FF4450089AA81 /* DiscreteDataShowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087454B222FF4450089AA81 /* DiscreteDataShowerViewController.swift */; };
 		30EF259D222E8C6300C3F01C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF259C222E8C6300C3F01C /* AppDelegate.swift */; };
-		30EF259F222E8C6300C3F01C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF259E222E8C6300C3F01C /* ViewController.swift */; };
+		30EF259F222E8C6300C3F01C /* DataDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF259E222E8C6300C3F01C /* DataDescriptionViewController.swift */; };
 		30EF25A2222E8C6300C3F01C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EF25A0222E8C6300C3F01C /* Main.storyboard */; };
 		30EF25A4222E8C6400C3F01C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30EF25A3222E8C6400C3F01C /* Assets.xcassets */; };
 		30EF25A7222E8C6400C3F01C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EF25A5222E8C6400C3F01C /* LaunchScreen.storyboard */; };
@@ -18,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3087454B222FF4450089AA81 /* DiscreteDataShowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteDataShowerViewController.swift; sourceTree = "<group>"; };
 		30EF2599222E8C6300C3F01C /* MSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EF259C222E8C6300C3F01C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30EF259E222E8C6300C3F01C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30EF259E222E8C6300C3F01C /* DataDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDescriptionViewController.swift; sourceTree = "<group>"; };
 		30EF25A1222E8C6300C3F01C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30EF25A3222E8C6400C3F01C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30EF25A6222E8C6400C3F01C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				30EF259C222E8C6300C3F01C /* AppDelegate.swift */,
-				30EF259E222E8C6300C3F01C /* ViewController.swift */,
+				30EF259E222E8C6300C3F01C /* DataDescriptionViewController.swift */,
+				3087454B222FF4450089AA81 /* DiscreteDataShowerViewController.swift */,
 				30EF25AE222E956A00C3F01C /* DataCharacteristic.swift */,
 				30EF25B0222E960700C3F01C /* DiscreteData.swift */,
 				30EF25A0222E8C6300C3F01C /* Main.storyboard */,
@@ -209,7 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30EF259F222E8C6300C3F01C /* ViewController.swift in Sources */,
+				3087454C222FF4450089AA81 /* DiscreteDataShowerViewController.swift in Sources */,
+				30EF259F222E8C6300C3F01C /* DataDescriptionViewController.swift in Sources */,
 				30EF25AF222E956A00C3F01C /* DataCharacteristic.swift in Sources */,
 				30EF25B1222E960700C3F01C /* DiscreteData.swift in Sources */,
 				30EF259D222E8C6300C3F01C /* AppDelegate.swift in Sources */,
@@ -369,7 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlevkovych.MSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,7 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rlevkovych.MSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
