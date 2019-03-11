@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		062CEEE889D9D4FBF1A6A3D0 /* Pods_MSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF397AB199CFB39DD6B56B3 /* Pods_MSApp.framework */; };
 		3087454C222FF4450089AA81 /* DiscreteDataShowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087454B222FF4450089AA81 /* DiscreteDataShowerViewController.swift */; };
+		30B4BD172235CAE800D8D424 /* MSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B4BD162235CAE800D8D424 /* MSData.swift */; };
+		30B4BD19223642CF00D8D424 /* ContiniousData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B4BD18223642CE00D8D424 /* ContiniousData.swift */; };
 		30EF259D222E8C6300C3F01C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF259C222E8C6300C3F01C /* AppDelegate.swift */; };
 		30EF259F222E8C6300C3F01C /* DataDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF259E222E8C6300C3F01C /* DataDescriptionViewController.swift */; };
 		30EF25A2222E8C6300C3F01C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EF25A0222E8C6300C3F01C /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		3087454B222FF4450089AA81 /* DiscreteDataShowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteDataShowerViewController.swift; sourceTree = "<group>"; };
+		30B4BD162235CAE800D8D424 /* MSData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSData.swift; sourceTree = "<group>"; };
+		30B4BD18223642CE00D8D424 /* ContiniousData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContiniousData.swift; sourceTree = "<group>"; };
 		30EF2599222E8C6300C3F01C /* MSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EF259C222E8C6300C3F01C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30EF259E222E8C6300C3F01C /* DataDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -69,9 +73,11 @@
 			children = (
 				30EF259C222E8C6300C3F01C /* AppDelegate.swift */,
 				30EF259E222E8C6300C3F01C /* DataDescriptionViewController.swift */,
+				30B4BD18223642CE00D8D424 /* ContiniousData.swift */,
 				3087454B222FF4450089AA81 /* DiscreteDataShowerViewController.swift */,
 				30EF25AE222E956A00C3F01C /* DataCharacteristic.swift */,
 				30EF25B0222E960700C3F01C /* DiscreteData.swift */,
+				30B4BD162235CAE800D8D424 /* MSData.swift */,
 				30EF25A0222E8C6300C3F01C /* Main.storyboard */,
 				30EF25A3222E8C6400C3F01C /* Assets.xcassets */,
 				30EF25A5222E8C6400C3F01C /* LaunchScreen.storyboard */,
@@ -215,6 +221,8 @@
 				3087454C222FF4450089AA81 /* DiscreteDataShowerViewController.swift in Sources */,
 				30EF259F222E8C6300C3F01C /* DataDescriptionViewController.swift in Sources */,
 				30EF25AF222E956A00C3F01C /* DataCharacteristic.swift in Sources */,
+				30B4BD172235CAE800D8D424 /* MSData.swift in Sources */,
+				30B4BD19223642CF00D8D424 /* ContiniousData.swift in Sources */,
 				30EF25B1222E960700C3F01C /* DiscreteData.swift in Sources */,
 				30EF259D222E8C6300C3F01C /* AppDelegate.swift in Sources */,
 			);
@@ -300,6 +308,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -354,6 +363,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

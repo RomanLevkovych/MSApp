@@ -16,6 +16,8 @@ class DataDescriptionViewController: UIViewController {
   @IBOutlet weak var amountTextField: UITextField!
   @IBOutlet weak var sequenceTypeSegmentedControl: UISegmentedControl!
 
+  var dataCharacteristic = DataCharacteristic()
+
   // MARK: - ViewController Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,11 +34,24 @@ class DataDescriptionViewController: UIViewController {
     }
     let type = sequenceTypeSegmentedControl.selectedSegmentIndex
 
-    let dataCharacteristic = DataCharacteristic.init(startInterval: start,
-                                                     endInterval: end,
-                                                     type: DataType(rawValue: type)!,
-                                                     amount: amount)
-    let temp = DiscreteData(from: dataCharacteristic)
+    dataCharacteristic = DataCharacteristic(start: start, finish: end, type: DataType(rawValue: type)!, amount: amount)
+  }
+
+  // MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier {
+    case "discreteIdentifier":
+      guard let vc = segue.destination as? DiscreteDataShowerViewController else { return }
+      switch dataCharacteristic.type {
+      case .discrete:
+        vc.sequence = DiscreteData(from: dataCharacteristic)
+      case .continious:
+        vc.sequence = ContiniousData(from: dataCharacteristic)
+      }
+      dump(vc.sequence)
+    default:
+      return
+    }
   }
 }
 

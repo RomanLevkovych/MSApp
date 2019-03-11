@@ -16,6 +16,16 @@ enum DataType: Int {
 struct DataCharacteristic {
   let startInterval: Int
   let endInterval: Int
-  let type: DataType
+  let type: DataType 
   let amount: Int
+
+  init(start: Int = 0,
+       finish: Int = 0,
+       type: DataType = .discrete,
+       amount: Int = 0) {
+    startInterval = start
+    endInterval = finish
+    self.type = type
+    self.amount = amount
+  }
 }

@@ -7,24 +7,35 @@
 //
 
 import UIKit
+import Charts
 
 class DiscreteDataShowerViewController: UIViewController {
 
+  // MARK: - UI Components
+  @IBOutlet weak var averageLabel: UILabel!
+  @IBOutlet weak var deviationLabel: UILabel!
+  @IBOutlet weak var dispersionLabel: UILabel!
+  @IBOutlet weak var mediaLabel: UILabel!
+  @IBOutlet weak var modeLabel: UILabel!
+  @IBOutlet weak var rangeLabel: UILabel!
+  @IBOutlet weak var standardLabel: UILabel!
+  @IBOutlet weak var variationSequenceLabel: UILabel!
+  @IBOutlet weak var dataDescriptionChartView: LineChartView!
+
+  var sequence: MSData = DiscreteData()
+
+  // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      averageLabel.text    = (averageLabel.text ?? "")    + String(describing: sequence.average)
+      deviationLabel.text  = (deviationLabel.text ?? "")  + String(describing: sequence.deviation)
+      dispersionLabel.text = (dispersionLabel.text ?? "") + String(describing: sequence.dispersion)
+      mediaLabel.text      = (mediaLabel.text ?? "")      + String(describing: sequence.median)
+      rangeLabel.text      = (rangeLabel.text ?? "")      + String(describing: sequence.range)
+      modeLabel.text       = (modeLabel.text ?? "")       + String(describing: sequence.mode)
+      standardLabel.text   = (standardLabel.text ?? "")   + String(describing: sequence.standard)
+      
+      variationSequenceLabel.text = sequence.data.reduce(into: "") { acc, item in acc += "\(item) " }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
