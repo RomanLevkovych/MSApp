@@ -21,7 +21,7 @@ class DataDescriptionViewController: UIViewController {
   // MARK: - ViewController Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    hideKeyboardWhenTappedAround() 
   }
 
   @IBAction func generateSequence(_ sender: UIButton) {
@@ -59,5 +59,21 @@ extension DataDescriptionViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return false
+  }
+
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    textField.resignFirstResponder()
+  }
+}
+
+extension UIViewController {
+  func hideKeyboardWhenTappedAround() {
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+    tap.cancelsTouchesInView = false
+    view.addGestureRecognizer(tap)
+  }
+
+  @objc func dismissKeyboard() {
+    view.endEditing(true)
   }
 }

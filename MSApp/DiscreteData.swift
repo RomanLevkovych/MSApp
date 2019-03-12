@@ -20,4 +20,8 @@ class DiscreteData: MSData {
   init() {
     data = []
   }
+
+  func group() -> [Double : Double] {
+    return data.reduce(into: [:]) { acc, item in acc[item, default: 0.0] += 1.0 }
+  }
 }

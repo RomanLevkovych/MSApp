@@ -10,7 +10,19 @@ import Foundation
 
 protocol MSData {
   var data: [Double] { get }
-  
+
+  func group() -> [Double:Double]
+
+  func quantil(alpha: Double) -> Double?
+  var median: Double { get }
+  var mode: [Double] { get }
+  var average: Double { get }
+  var deviation: Double { get }
+  var range: Double { get }
+  var varianza: Double { get }
+  var standard: Double { get }
+  var dispersion: Double { get }
+  var variation: Double { get }
 }
 
 extension MSData {
@@ -41,7 +53,7 @@ extension MSData {
 
   var deviation: Double {
     let av = average
-    return data.reduce(into: 0.0) { $0 += (Double($1) - av)*(Double($1) - av) }
+    return data.reduce(0.0) { $0 + (Double($1) - av)*(Double($1) - av) }
   }
 
   var range: Double {
